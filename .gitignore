@@ -3,3 +3,5 @@
 /plotly-cloud.toml
 /weather.json
 .env
+__pycache__
+*.pyc
