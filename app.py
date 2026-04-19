@@ -4,7 +4,7 @@ from layouts import create_layout
 from callbacks import register_callbacks
 
 
-app = Dash(__name__, external_stylesheets=[dbc.themes.DARKLY])
+app = Dash(__name__, external_stylesheets=[dbc.themes.QUARTZ])
 app.title = 'Погодный дашборд'
 app.layout = create_layout()
 
