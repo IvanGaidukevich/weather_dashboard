@@ -4,7 +4,7 @@ from dash import dcc
 def create_layout():
     return dbc.Container([
         dbc.NavbarSimple(
-            brand="🌦 Прогноз  погоды 🌦",
+            brand="🌦 Погодный дашборд 🌦",
             brand_href="#",
             color="primary",
             dark=True,
