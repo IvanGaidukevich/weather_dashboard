@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+
+:root {
+    --bg-start: #0a1f2e;
+    --bg-end: #163a54;
+    --surface: rgba(255, 255, 255, 0.8);
+    --text-main: #10212e;
+    --accent: #ff7a18;
+    --border-soft: rgba(16, 33, 46, 0.1);
+    --shadow-soft: 0 10px 30px rgba(6, 22, 34, 0.2);
+}
+
+body {
+    margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--text-main);
+    background: radial-gradient(circle at 10% 15%, #3c8dbc 0%, transparent 38%),
+                radial-gradient(circle at 90% 10%, #ffb564 0%, transparent 34%),
+                linear-gradient(135deg, var(--bg-start), var(--bg-end));
+    min-height: 100vh;
+}
+
+.weather-navbar{
+    border-radius: 20px;
+    box-shadow: var(--shadow-soft);
+}
+
+.weather-navbar.navbar {
+    background: linear-gradient(95deg, #05324f, #11618f);
+}
+
+.weather-navbar .navbar-brand {
+    color: #d7e7f3;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.weather-tabs {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-soft);
+    border-radius: 20px;
+    padding: 12px;
+}
+
+
+.weather-tabs .nav-tabs {
+   border-bottom: 0;
+   gap: 8px;
+}
+
+.weather-tabs .nav-link {
+    color: #d7e7f3;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    padding: 10px 14px;
+    transition: all 0.25s ease;
+}
+
+.weather-tabs .nav-link.active {
+    color: var(--text-main);
+    background: linear-gradient(140deg, #fff3e6, #ffffff);
+    box-shadow: 0 8px 20px rgba(10, 28, 42, 0.18);
+}
+
+.weather-card, .card{
+    background: var(--surface);
+    border: 1px solid var(--border-soft);
+    border-radius: 20px;
+    box-shadow: var(--shadow-soft);
+}
+
+.form-control{
+   
+    border-radius: 12px;
+    border-color: #d7e7f3;
+}
+
+.form-control:focus {
+    border: 5px solid var(--accent);
+    box-shadow: 0 0 0 3px rgba(255, 122, 24, 0.2);
+}
+
+
+.form-check-label {
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+.form-check-input:checked {
+    background-color: var(--accent);
+    border-color: var(--accent);
+}
+
+.dash-graph {
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: var(--shadow-soft);
+    padding: 6px;
+}
+   

@@ -2,6 +2,7 @@ from datetime import date
 from dash import Input, Output, html
 import plotly.graph_objects as go
 from utils.db import load_temperature_data, get_temperature_date_bounds
+from assets.plotly_theme import apply_theme
 
 
 def register_db_temperature_callbacks(app):
@@ -77,4 +78,4 @@ def register_db_temperature_callbacks(app):
                 name='Максимальная температура'
             ))
 
-        return figure
+        return apply_theme(figure)

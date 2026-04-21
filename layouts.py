@@ -8,11 +8,12 @@ def create_layout():
             brand_href="#",
             color="primary",
             dark=True,
-            className="mb-4 flex justify-content-between",
+            className="weather-navbar mb-4",
         ),
         dbc.Tabs(
             id='weather-tabs',
             active_tab='live-weather-tab',
+            className="weather-tabs",
             children=[
                 dbc.Tab(
                     label='Текущий прогноз',
@@ -53,11 +54,11 @@ def create_layout():
                                             marks={i: str(i) for i in [2, 4, 6, 8]},
                                         ),
                                     ]),
-                                    className="mt-3"
+                                    className="weather-card mt-3"
                                 ),
                             ], width=6, xs=12, md=6),
                             dbc.Col(dbc.Card(id='weather-output', 
-                                             body=True), 
+                                             body=True, class_name='weather-card'), 
                                              width=6, xs=12, md=6),
                         ], className="mb-3 mt-3"),
 
@@ -121,7 +122,7 @@ def create_layout():
                                                        width=12, md=4),
                                 ]),
                             ], width=12, md=6),
-                        ], className='mt-3 mb-3'),
+                        ], className='weather-card mt-3 mb-3 mx-2 p-3'),
                         dbc.Row([
                             dbc.Col(dcc.Graph(id='db-temp-graph'), 
                                     width=12),

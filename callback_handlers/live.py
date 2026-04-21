@@ -1,6 +1,8 @@
 from dash import Input, Output, html
 from utils.data_loader import load_data
+from assets.plotly_theme import apply_theme
 import plotly.graph_objects as go
+
 
 
 def calc_moving_average(values, window):
@@ -104,4 +106,4 @@ def register_callbacks_live(app):
             
         )
 
-        return weather_info, temp_fig, ap_fig, wind_dir_fig
+        return weather_info, apply_theme(temp_fig), apply_theme(ap_fig), apply_theme(wind_dir_fig)
